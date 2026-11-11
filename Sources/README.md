@@ -1,19 +1,21 @@
 # HMR-ALL Sources
 
-All 13 proxy sources are stored separately.
+12 automatically synchronized sources.
 
-Each source has its own file and is updated automatically.
+Only VLESS, VMess and Trojan configurations are retained.
 
 1. MustafaBaqer
 2. aviamastersgh
 3. R3ZARAHIMI
 4. ALIILAPRO
 5. ermaozi
-6. svinakraft-maker
+6. FlareFeed
 7. alireza786786
-8. openproxylist
-9. cbusifabcap
-10. 0xRadikal
-11. histeenn
-12. igareck
-13. mrdevmohamed
+8. daily_free_vpn
+9. 0xRadikal
+10. histeenn
+11. igareck
+12. mrdevmohamed
+
+Each source has its own directory.
+Updates run automatically every 5 minutes.
