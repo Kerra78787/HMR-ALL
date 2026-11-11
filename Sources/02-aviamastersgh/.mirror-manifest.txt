@@ -1,0 +1,4 @@
+all_configs.txt
+ru_configs.txt
+site/robots.txt
+verified_configs.txt
