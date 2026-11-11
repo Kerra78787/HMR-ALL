@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://aviamastersgh.github.io/vpn-free-russia/sitemap.xml

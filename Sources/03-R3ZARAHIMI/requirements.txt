@@ -1,6 +1,0 @@
-Kurigram
-PyYAML==6.0.3
-tgcrypto
-requests
-ipaddress
-geoip2
