@@ -1,3 +1,4 @@
+
 name: HMR-ALL Auto Update
 
 on:
@@ -25,12 +26,13 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install dependencies
-        run: pip install requests
+      - name: Install Git LFS
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-lfs
+          git lfs install
 
-      - name: Update all sources
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update full repositories
         run: python update.py
 
       - name: Save changes
@@ -39,6 +41,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A Sources/
           git diff --cached --quiet || {
-            git commit -m "Update source mirrors"
+            git commit -m "Update full source mirrors"
             git push
           }
+          
