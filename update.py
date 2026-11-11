@@ -1,5 +1,4 @@
 
-import os
 import shutil
 import subprocess
 import tempfile
@@ -88,19 +87,17 @@ def refresh(name, repository):
             str(checkout),
         ])
 
-        # Download Git LFS files when available.
-        lfs = shutil.which("git-lfs")
-
-        if lfs:
+        if shutil.which("git-lfs"):
             run_git(["git", "lfs", "pull"], cwd=checkout)
 
             run_git([
-                "git", "submodule", "foreach",
+                "git",
+                "submodule",
+                "foreach",
                 "--recursive",
                 "git lfs pull"
             ], cwd=checkout)
 
-        # Copy the complete working tree without changing file contents.
         shutil.copytree(
             checkout,
             mirror,
@@ -111,7 +108,6 @@ def refresh(name, repository):
         if not any(mirror.iterdir()):
             raise RuntimeError("Repository copy is empty")
 
-        # Replace only after the complete copy succeeds.
         replace_directory(mirror, destination)
 
         print(f"OK: {name} <- {repository}")
@@ -145,7 +141,7 @@ def main():
 
     if errors:
         raise SystemExit(
-            "Some sources failed. Their previous copies were preserved: "
+            "Some sources failed. Previous copies were preserved: "
             + ", ".join(errors)
         )
 
@@ -154,39 +150,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-s()) for v in new_files.values())
-    print(f"OK: {name}: {len(new_files)} TXT files, {count} configs")
-
-
-def main():
-    ROOT.mkdir(exist_ok=True)
-    errors = []
-
-    with ThreadPoolExecutor(max_workers=6) as executor:
-        jobs = {
-            executor.submit(refresh, name, repo, folder): name
-            for name, (repo, folder) in SOURCES.items()
-        }
-
-        for job in as_completed(jobs):
-            name = jobs[job]
-            try:
-                job.result()
-            except Exception as error:
-                errors.append(name)
-                print(f"ERROR: {name}: {error}")
-
-    print(f"\nSources: {len(SOURCES)}")
-    print(f"Errors: {len(errors)}")
-
-    if errors:
-        raise SystemExit(
-            "Some sources failed. Their old mirrored data was preserved."
-        )
-
-    print("All 12 sources synchronized successfully!")
-
-
-if __name__ == "__main__":
-    main()
-        
