@@ -1,0 +1,67 @@
+name: Mirror to SourceHut
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: mirror-to-sourcehut
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Configure SSH for SourceHut
+        env:
+          SOURCEHUT_SSH_PRIVATE_KEY: ${{ secrets.SOURCEHUT_SSH_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          printf '%s\n' "$SOURCEHUT_SSH_PRIVATE_KEY" > ~/.ssh/sourcehut_mirror_ed25519
+          chmod 600 ~/.ssh/sourcehut_mirror_ed25519
+
+          ssh-keyscan git.sr.ht >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Push main branch to SourceHut
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git remote remove sourcehut 2>/dev/null || true
+          git remote add sourcehut "git@git.sr.ht:~igareck/vpn-configs-for-russia"
+
+          for attempt in 1 2 3 4 5; do
+            echo "SourceHut push attempt $attempt/5"
+
+            if GIT_SSH_COMMAND="ssh -i ~/.ssh/sourcehut_mirror_ed25519 -o IdentitiesOnly=yes" \
+              git push sourcehut HEAD:main --force; then
+              echo "SourceHut push successful"
+              exit 0
+            fi
+
+            sleep_time=$((attempt * 45))
+            echo "SourceHut push failed. Sleeping ${sleep_time}s before retry..."
+            sleep "$sleep_time"
+          done
+
+          echo "SourceHut push failed after all retries"
+          exit 1

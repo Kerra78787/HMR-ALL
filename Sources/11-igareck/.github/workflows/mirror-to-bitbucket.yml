@@ -1,0 +1,108 @@
+name: Mirror to Bitbucket
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+concurrency:
+  group: mirror-to-bitbucket
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout latest GitHub main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 1
+          path: source
+          persist-credentials: false
+
+      - name: Clone current Bitbucket main
+        env:
+          BITBUCKET_TOKEN: ${{ secrets.BITBUCKET_MIRROR_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          test -n "$BITBUCKET_TOKEN"
+
+          git clone \
+            --depth=1 \
+            --single-branch \
+            --branch=main \
+            --no-tags \
+            "https://x-token-auth:${BITBUCKET_TOKEN}@bitbucket.org/igareck/vpn-configs-for-russia.git" \
+            mirror
+
+          git -C mirror config user.name "github-actions"
+          git -C mirror config user.email "github-actions@github.com"
+
+      - name: Synchronize GitHub snapshot onto Bitbucket main
+        id: prepare
+        run: |
+          set -euo pipefail
+
+          source_dir="${GITHUB_WORKSPACE}/source"
+          mirror_dir="${GITHUB_WORKSPACE}/mirror"
+
+          rsync -a --delete --exclude='.git/' "$source_dir/" "$mirror_dir/"
+
+          curl -fsSL \
+            "https://raw.githubusercontent.com/igareck/GoldCaviar/main/Files/README-BITBUCKET.md" \
+            -o "$mirror_dir/README.md"
+          test -s "$mirror_dir/README.md"
+
+          rm -f \
+            "$mirror_dir/README-EN-US.md" \
+            "$mirror_dir/README-FA-IR.md" \
+            "$mirror_dir/README-ZH-CN.md"
+
+          git -C "$mirror_dir" add -A
+
+          if git -C "$mirror_dir" diff --cached --quiet; then
+            echo "Bitbucket already matches the adapted GitHub snapshot"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          source_sha=$(git -C "$source_dir" rev-parse HEAD)
+          source_subject=$(git -C "$source_dir" log -1 --format=%s)
+
+          git -C "$mirror_dir" commit \
+            -m "$source_subject" \
+            -m "Mirrored from GitHub commit ${source_sha}"
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Push fast-forward update to Bitbucket
+        if: steps.prepare.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+
+          cd "${GITHUB_WORKSPACE}/mirror"
+
+          for attempt in 1 2 3 4 5; do
+            echo "Bitbucket fast-forward push attempt ${attempt}/5"
+
+            if git push origin main; then
+              echo "Bitbucket fast-forward push successful"
+              exit 0
+            fi
+
+            sleep_time=$((attempt * 45))
+            echo "Bitbucket push failed. Sleeping ${sleep_time}s before retry..."
+            sleep "$sleep_time"
+          done
+
+          echo "Bitbucket push failed after all retries" >&2
+          exit 1

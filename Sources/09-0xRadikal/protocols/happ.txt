@@ -1,0 +1,8 @@
+#profile-title: @Raydikalx — HAPP
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/raydikalx
+#profile-web-page-url: https://github.com/0xRadikal/Free-v2ray-Configs
+# @Raydikalx — happ — 1 configs
+# --- below: schemes sing-box cannot parse (skipped by Hiddify) ---
+happ://crypt5/fzvdpdEvmoCqLl8nmBUZwLkt305duH4tXmMnPElWUNwsOGsMWIw5SPiu4qzSTEjFU/480C/lsPSrPwrxzLumuRyD9MO6Qv199A3/ZonUCEmSsqKzxuy++twwQ729Z8cQscQFawfD0CikM4S6dgUQHoqZMQwaVubrTyhHnv/WsVQtws1tfBabuxyfHh7xIpvsrmeMhVHVUTjpaefiF46lJ2xPL76Kzh53TIjehvSGQ6tsum7DbQi4ti5GnIXWHUjzbI3AHu4JbV3Qe4f9DOQl2Uzl11V5M3Qc/yYOyOcEoS0f4wxE7TDDFv3JqgEIR3WXVdIl1g2XBaz1POTTjt4vX3FMBZzUBl3h7iI8kaMoOvBze+3pNp4Jr5n3+k6jArweP9IFyuCgCdldPtk1bbvY6X1iR6/pUEoy9Swf9xLV7S5nc+Y4pA29SzrKSexZb3CHyZKig4EsXgugkemVBS+ty1SToLMGVGsy70BSyWhKujD9cr65SBJQRSDgVR4ws+Xma5MeyUpVCTjQuttQSeISDPIcLxySXvHrHpOdKHRtmIY6nDhhRGyxRXhvvBBYjnZKA2ORbeJR/Toy/s9iYQFFGareWopqyYeYm0LcmIsKsyUnplW8TXou8kc7NMI+UfMPQDxdHOp6HMd+J5N3s20SmB1361G9nbg4YK/U59WkCXQH3e3JUy9zLaIh4Wuth4SM6x+mQYtUdmmhw++Wy49iSqvB4XX9Rpkzcmtxd0TjBqQBlnIeqyLQNu8PontvaC400Mqah/97FIHaeWeVamDtiG4oE94b7ybKfbnswi7D19wXyWwshl3AyYxkE78LCqWNyUub1Bu/gVikmgtBmnXjuvcS2NfqYsp2UlaAfHzzAYuyj34yrkBKdA3VACpg2pvPVzLsWKI/1cSfGW/3sH2fuOi9xgQ9Vykz7ucFJQnaLWDfjwOX4FOqHcajnOKjKGgA4C4F4TG5MKJiuC6RDLT0LLnvktXh2v8i5kTiscomWOkB9dkU0BUkOV1GfoU=ff#Global 🌐 | @Raydikalx | EE717E

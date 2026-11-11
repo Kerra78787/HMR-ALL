@@ -1,0 +1,15 @@
+#profile-title: @Raydikalx — HONG KONG (HK)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/raydikalx
+#profile-web-page-url: https://github.com/0xRadikal/Free-v2ray-Configs
+# @Raydikalx — HONG KONG (HK) — 6 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+vless://f4dc7e38-f861-460b-b1af-d8a5fa141d7b@111.68.14.18:443?type=tcp&security=reality&fp=chrome&pbk=iPjmjJ-QoIFgm0QumbMLLpT1w9w_HZNqRjtPoFqx7WY&sid=c6e2572e3267&sni=cloudflare.com#HK 🇭🇰 | @Raydikalx | 054AE0
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@39.109.111.23:28675?security=reality&encryption=none&pbk=jgtiLXdCnQ9WRWMuu2gsuGQOQTCRZQpspnn228kjTSA&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.lamer.com.hk&sid=9a79807253c040#HK 🇭🇰 | @Raydikalx | 5B9089
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@doghkzf.zalolink.com:28675?encryption=none&flow=xtls-rprx-vision&pbk=jgtiLXdCnQ9WRWMuu2gsuGQOQTCRZQpspnn228kjTSA&security=reality&sid=9a79807253c040&sni=www.lamer.com.hk&type=tcp#HK 🇭🇰 | @Raydikalx | AEA12F
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@39.109.111.23:48158/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&allowInsecure=1&fp=chrome&security=reality&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&sid=54cca3c1c1c7#HK 🇭🇰 | @Raydikalx | FE986B
+vless://57beeeb0-03fc-4fc9-94da-7604488a7134@doghkzf.zalolink.com:48158?fp=chrome&headerType=none&pbk=7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo&encryption=none&sid=54cca3c1c1c7&flow=xtls-rprx-vision&sni=www.apple.com&type=tcp&security=reality#HK 🇭🇰 | @Raydikalx | B2FD1A
+vmess://eyJhZGQiOiIxNTYuMjM5LjIyNC4xMDciLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEyNzBiZWQ1LWY5MDgtNGVjYy1mMWM4LWRlMjQ2MDMzYjE4NiIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiNTcyNzgiLCJwcyI6IkhLIPCfh63wn4ewIHwgQFJheWRpa2FseCB8IDZBMEFEQyIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==

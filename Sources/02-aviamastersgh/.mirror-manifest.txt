@@ -1,6 +1,0 @@
-# HMR-ALL manifest v3
-# source=aviamastersgh/vpn-free-russia
-# prefix=
-all_configs.txt
-ru_configs.txt
-verified_configs.txt

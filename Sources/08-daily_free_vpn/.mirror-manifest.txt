@@ -1,4 +1,0 @@
-# HMR-ALL manifest v3
-# source=cbusifabcap/daily_free_vpn
-# prefix=
-Z.txt

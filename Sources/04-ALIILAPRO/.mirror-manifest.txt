@@ -1,5 +1,0 @@
-# HMR-ALL manifest v3
-# source=ALIILAPRO/v2rayNG-Config
-# prefix=
-server.txt
-sub.txt

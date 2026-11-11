@@ -1,0 +1,64 @@
+name: Mirror to Codeberg
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: mirror-to-codeberg
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Push main branch to Codeberg
+        env:
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_MIRROR_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git remote remove codeberg 2>/dev/null || true
+          git remote add codeberg "https://igareck:${CODEBERG_TOKEN}@codeberg.org/igareck/vpn-configs-for-russia.git"
+
+          LOCAL_SHA="$(git rev-parse HEAD)"
+          REMOTE_SHA="$(git ls-remote codeberg refs/heads/main | awk '{print $1}' || true)"
+
+          echo "Local GitHub main:   $LOCAL_SHA"
+          echo "Remote Codeberg main: ${REMOTE_SHA:-unknown}"
+
+          if [ -n "${REMOTE_SHA:-}" ] && [ "$LOCAL_SHA" = "$REMOTE_SHA" ]; then
+            echo "Codeberg is already up to date. Skipping push."
+            exit 0
+          fi
+
+          for attempt in 1 2 3 4 5; do
+            echo "Codeberg push attempt $attempt/5"
+
+            if git push codeberg HEAD:main --force; then
+              echo "Codeberg push successful"
+              exit 0
+            fi
+
+            sleep_time=$((attempt * 60))
+            echo "Codeberg push failed. Sleeping ${sleep_time}s before retry..."
+            sleep "$sleep_time"
+          done
+
+          echo "Codeberg push failed after all retries"
+          exit 1

@@ -1,0 +1,43 @@
+name: Update star history
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: star-tracker
+  cancel-in-progress: true
+
+jobs:
+  generate-star-history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          fetch-depth: 0
+
+      - name: Generate star history chart
+        uses: fbuireu/github-star-tracker@9aa99212f2fdb73a5f288de5e0ad2c8d16d20553 # v1.23.0
+        with:
+          github-token: ${{ secrets.STAR_TRACKER_TOKEN }}
+
+          only-orgs: igareck
+          only-repos: vpn-configs-for-russia
+
+          visibility: public
+          include-forks: "false"
+          include-charts: "true"
+
+          data-branch: star-tracker-data
+
+          top-repos: "1"
+
+          smart-sampling: "false"

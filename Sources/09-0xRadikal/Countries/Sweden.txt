@@ -1,0 +1,17 @@
+#profile-title: @Raydikalx — SWEDEN (SE)
+#profile-update-interval: 1
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
+#support-url: https://t.me/raydikalx
+#profile-web-page-url: https://github.com/0xRadikal/Free-v2ray-Configs
+# @Raydikalx — SWEDEN (SE) — 8 configs
+# source: verified/ — every config passed a real proxied request in ALL L3 rounds
+# location: GeoIP (DB-IP Country Lite) on the real network address of the server
+# note: this is where the SERVER is, not necessarily where your traffic exits
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@138.199.55.243:19999#SE 🇸🇪 | @Raydikalx | 6B785C
+vmess://eyJhZGQiOiIxMzguMTk5LjU1LjIzMCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiI1YzA0MGYxZC00NWRiLTQzYmQtOGQ0Ni1lNDk1MGU0MzM3MzUiLCJpbnNlY3VyZSI6IjAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicGNzIjoiIiwicG9ydCI6MTI3MCwicHMiOiJTRSDwn4e48J+HqiB8IEBSYXlkaWthbHggfCA5MTNGRUYiLCJzY3kiOiJhdXRvIiwic25pIjoieG1maGxweS5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIiwidmNuIjoiIiwibmFtZSI6IlNFIPCfh7jwn4eqIHwgQFJheWRpa2FseCB8IDkxM0ZFRiJ9
+vmess://eyJhZGQiOiI2Mi45My4xNjYuMTg0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI1YzA0MGYxZC00NWRiLTQzYmQtOGQ0Ni1lNDk1MGU0MzM3MzUiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjEyNzAiLCJwcyI6IlNFIPCfh7jwn4eqIHwgQFJheWRpa2FseCB8IEIyMzlCNCIsInNjeSI6ImF1dG8iLCJzbmkiOiJ4bWZobHB5LmNvbSIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+vless://4f51ca84-43ea-4087-b8a2-938e0ccbe27a@31.77.18.220:443?security=reality&encryption=none&pbk=mDDDyruO33nuqcTS7pZOjd9oOpDHUf0aEv2TQ1DFGV4&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision-udp443&sni=google.com#SE 🇸🇪 | @Raydikalx | 5EA78A
+vless://f59fdac3-5842-449b-8c8d-d5ebcdbf1768@141.227.160.61:8443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sid=6ba85179e30d4fc2&sni=apple.com&type=tcp#SE 🇸🇪 | @Raydikalx | 08A32D
+vless://b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b@138.124.86.230:48115?mode=gun&security=tls&encryption=none&fp=firefox&type=grpc&serviceName=138-124-86-230-sslip-io&allowInsecure=0&sni=138-124-86-230.sslip.io#SE 🇸🇪 | @Raydikalx | EC1AE7
+vless://b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b@138.124.86.230:48115?security=tls&serviceName=138-124-86-230-sslip-io&sni=138-124-86-230.sslip.io&type=grpc#SE 🇸🇪 | @Raydikalx | A7082B
+vless://6e4e3601-41d5-4359-bcc4-00519c9005bf@13.53.91.116:25278?encryption=mlkem768x25519plus.native.0rtt.GmE_5mfMSsdLtjCkWXOTbokKqk0sC4PsIq_2x5kvdS4&flow=xtls-rprx-vision&security=reality&sni=gateway-sr-china.icloud.com&fp=chrome&pbk=81ChLiGoNl-VyTW2VpTo5uSpe6MLnaozq7SJFEMnPVU&sid=1faa2db876&spx=/ac3a88f4364d5c3&type=xhttp&host=subgift.r7vx4-shadow-matrix.space&path=/t.me-SubGift&mode=auto&extra={"mode":"auto","xPaddingBytes":"100-1000"}#SE 🇸🇪 | @Raydikalx | BEF94B

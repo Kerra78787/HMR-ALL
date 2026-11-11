@@ -1,7 +1,0 @@
-# HMR-ALL manifest v3
-# source=ermaozi/get_subscribe
-# prefix=subscribe
-reachable/v2ray.txt
-unreachable/v2ray.txt
-untested/v2ray.txt
-v2ray.txt

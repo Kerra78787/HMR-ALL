@@ -1,9 +1,0 @@
-# HMR-ALL manifest v3
-# source=0xRadikal/Free-v2ray-Configs
-# prefix=protocols
-trojan.txt
-trojan_base64.txt
-vless.txt
-vless_base64.txt
-vmess.txt
-vmess_base64.txt

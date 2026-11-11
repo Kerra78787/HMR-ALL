@@ -1,0 +1,137 @@
+name: Publish GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Generate configs.json
+        run: |
+          set -e
+
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          root = Path.cwd()
+          site = root / "site"
+          site.mkdir(exist_ok=True)
+
+          def load_file(name):
+              p = root / name
+
+              if not p.exists():
+                  return []
+
+              result = []
+              seen = set()
+
+              for line in p.read_text(
+                  encoding="utf-8",
+                  errors="replace"
+              ).splitlines():
+
+                  value = line.strip()
+
+                  if not value:
+                      continue
+
+                  if value.startswith("#"):
+                      continue
+
+                  if value in seen:
+                      continue
+
+                  seen.add(value)
+                  result.append(value)
+
+              return result
+
+          verified = load_file("verified_configs.txt")
+          all_configs = load_file("all_configs.txt")
+
+          data = {
+              "updated": datetime.now(timezone.utc).isoformat(),
+              "verified": verified,
+              "all": all_configs
+          }
+
+          output = site / "configs.json"
+
+          output.write_text(
+              json.dumps(
+                  data,
+                  ensure_ascii=False,
+                  separators=(",", ":")
+              ),
+              encoding="utf-8"
+          )
+
+          print("verified:", len(verified))
+          print("all:", len(all_configs))
+          print("file:", output)
+          print("size:", output.stat().st_size)
+          PY
+
+          test -s site/configs.json
+
+      - name: Prepare site
+        run: |
+          set -e
+
+          test -f site/index.html
+          test -f site/configs.json
+
+          rm -rf /tmp/gh-pages
+          mkdir -p /tmp/gh-pages
+
+          cp -a site/. /tmp/gh-pages/
+
+          touch /tmp/gh-pages/.nojekyll
+
+          echo "=== PUBLISHED FILES ==="
+          find /tmp/gh-pages -maxdepth 1 -type f \
+            -printf '%f %s bytes\n' | sort
+
+      - name: Publish gh-pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          cd /tmp/gh-pages
+
+          git init
+          git checkout -b gh-pages
+
+          git add -A
+          git commit -m "deploy: update VPN site"
+
+          git remote add origin \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
+          git push --force origin gh-pages
+
+          echo "=== DEPLOYED ==="
