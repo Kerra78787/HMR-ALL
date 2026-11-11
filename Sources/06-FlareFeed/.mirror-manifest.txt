@@ -1,10 +1,8 @@
-# HMR-ALL mirror manifest v2
+# HMR-ALL manifest v3
 # source=svinakraft-maker/FlareFeed
 # prefix=public
 Top500.txt
 fastest.txt
-llms-full.txt
 podpiska.txt
 trojan.txt
 vless.txt
-vmess.txt

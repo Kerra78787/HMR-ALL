@@ -1,4 +1,4 @@
-# HMR-ALL mirror manifest v2
+# HMR-ALL manifest v3
 # source=ermaozi/get_subscribe
 # prefix=subscribe
 reachable/v2ray.txt

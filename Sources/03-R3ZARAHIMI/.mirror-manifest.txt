@@ -1,4 +1,4 @@
-# HMR-ALL mirror manifest v2
+# HMR-ALL manifest v3
 # source=R3ZARAHIMI/tg-v2ray-configs-every2h
 # prefix=
 Config_jo.txt

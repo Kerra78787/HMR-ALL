@@ -1,4 +1,4 @@
-# HMR-ALL mirror manifest v2
+# HMR-ALL manifest v3
 # source=aviamastersgh/vpn-free-russia
 # prefix=
 all_configs.txt

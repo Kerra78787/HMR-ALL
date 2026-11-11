@@ -1,4 +1,4 @@
-# HMR-ALL mirror manifest v2
+# HMR-ALL manifest v3
 # source=alireza786786/Free-V2ray-Configs
 # prefix=servers
 countries/australia.txt

@@ -1,4 +1,4 @@
-# HMR-ALL mirror manifest v2
+# HMR-ALL manifest v3
 # source=0xRadikal/Free-v2ray-Configs
 # prefix=protocols
 trojan.txt

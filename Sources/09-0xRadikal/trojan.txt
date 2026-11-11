@@ -4,7 +4,6 @@ trojan://!str18844@zxcvbn@os-tr-3.cats22.net:443#JP
 trojan://!str18844@zxcvbn@os-tr-5.cats22.net:443#JP
 trojan://-ainW_sA2h_JALjfNXrzIWGoRaFI3I9P@kimiadollarkimia-production.up.railway.app:443?path=/live/2fa2eba2-103a-4ea3-9430-8ca850a61731?ed=2560&security=tls&alpn=http/1.1&host=kimiadollarkimia-production.up.railway.app&fp=chrome&type=ws&sni=kimiadollarkimia-production.up.railway.app#SG
 trojan://-kbAbEMlUlkHZkCc00Xq0Zu7p5x4WAa7@eksmstr-production.up.railway.app:443?path=/live/d76b7cf8-35ad-4417-bf04-e86cf84a19b4?ed=2560&security=tls&alpn=http/1.1&insecure=0&host=eksmstr-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=eksmstr-production.up.railway.app#SG
-trojan://8r
 trojan://002023c45d18bca3eba2757bb683309a@42.51.25.69:59443?allowInsecure=1&sni=ja262.magiclampcloud.cn&type=tcp#CN
 trojan://002023c45d18bca3eba2757bb683309a@ja262.magiclampcloud.cn:59443?allowInsecure=1&type=tcp#CN
 trojan://010bd080-2133-11f0-a064-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB
@@ -84,7 +83,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.53:443?security=tls&sni=ww
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.67:443?sni=courses.explorecreativejobsandenhanceyourcareerportfolio.com&type=tcp#US
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.67:443?security=tls&sni=courses.explorecreativejobsandenhanceyourcareerportfolio.com&type=tcp&headerType=none#US
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.134:443?fp=chrome&sni=api.iloverussia2026.com#DE
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.134:443?security=tls&insecure=0&host=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&headerType=none&type=tcp&allowInsecure=0&sni=api.iloverussia2026.com#DE
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.134:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=api.iloverussia2026.com#DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.15:443?allowInsecure=1&sni=courses.iloverussia2026.com&type=tcp#DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.15:443?security=tls&sni=courses.iloverussia2026.com#DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.193:443?sni=resources.iloverussia2026.com&type=tcp#DE
@@ -99,7 +98,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.96:443#DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.96:443?sni=learn.iloverussia2026.com&type=tcp#DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.96:443?security=tls&sni=learn.iloverussia2026.com#DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443#CH
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?security=tls&sni=api.yourultimateprofessionalcareerhub.com&type=tcp&headerType=none#CH
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.yourultimateprofessionalcareerhub.com#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?sni=www.yourultimateprofessionalcareerhub.com&type=tcp#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=www.yourultimateprofessionalcareerhub.com#CH
@@ -107,7 +106,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?sni=resources.yourultimateprofessionalcareerhub.com&type=tcp#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?security=tls&host=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&headerType=none&type=tcp&sni=resources.yourultimateprofessionalcareerhub.com#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?fp=chrome&sni=yourultimateprofessionalcareerhub.com#CH
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?security=tls&sni=yourultimateprofessionalcareerhub.com&type=tcp&headerType=none#CH
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.222:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=yourultimateprofessionalcareerhub.com#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?sni=learn.yourultimateprofessionalcareerhub.com&type=tcp#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=learn.yourultimateprofessionalcareerhub.com#CH
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?allowInsecure=0&sni=courses.yourultimateprofessionalcareerhub.com#CH
