@@ -1,4 +1,4 @@
-
+import os
 import shutil
 import subprocess
 import tempfile
@@ -26,15 +26,27 @@ SOURCES = {
 ROOT = Path("Sources")
 
 
+def run_git(command, cwd=None):
+    return subprocess.run(
+        command,
+        cwd=cwd,
+        check=True,
+        timeout=900,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
+
+
 def resolve_repository(repository):
-    original_url = f"https://github.com/{repository}"
+    url = f"https://github.com/{repository}"
+
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": "HMR-ALL-Updater"}
+    )
 
     try:
-        request = urllib.request.Request(
-            original_url,
-            headers={"User-Agent": "HMR-ALL-Updater"}
-        )
-
         with urllib.request.urlopen(request, timeout=30) as response:
             final_url = response.geturl()
 
@@ -44,30 +56,78 @@ def resolve_repository(repository):
         if parsed.netloc.lower() == "github.com" and len(parts) >= 2:
             owner = parts[0]
             name = parts[1].removesuffix(".git")
-            resolved = f"{owner}/{name}"
 
-            if resolved.lower() != repository.lower():
-                print(f"Repository renamed or moved: {repository} -> {resolved}")
+            if owner and name:
+                resolved = f"{owner}/{name}"
 
-            return resolved
+                if resolved.lower() != repository.lower():
+                    print(f"Repository moved: {repository} -> {resolved}")
+
+                return resolved
 
     except Exception as error:
-        print(f"Could not resolve redirect for {repository}: {error}")
+        print(f"Redirect check warning for {repository}: {error}")
 
     return repository
 
 
-def run_git(command, cwd=None):
-    subprocess.run(
-        command,
-        cwd=cwd,
-        check=True,
-        timeout=600
-    )
-
-
 def ignore_git_metadata(directory, names):
     return {name for name in names if name == ".git"}
+
+
+def get_paths(directory):
+    result = set()
+
+    for current, dirs, files in os.walk(directory, followlinks=False):
+        dirs[:] = [d for d in dirs if d != ".git"]
+
+        base = Path(current)
+
+        for name in dirs + files:
+            path = base / name
+
+            if path.is_symlink() or path.is_file():
+                result.add(path.relative_to(directory).as_posix())
+
+    return result
+
+
+def verify_copy(source, mirror):
+    source_paths = get_paths(source)
+    mirror_paths = get_paths(mirror)
+
+    missing = source_paths - mirror_paths
+    extra = mirror_paths - source_paths
+
+    if missing or extra:
+        details = []
+
+        if missing:
+            details.append(
+                "Missing files: " + ", ".join(sorted(missing)[:20])
+            )
+
+        if extra:
+            details.append(
+                "Unexpected files: " + ", ".join(sorted(extra)[:20])
+            )
+
+        raise RuntimeError("Copy verification failed. " + " | ".join(details))
+
+    print(f"Copy verified: {len(source_paths)} files and links")
+
+
+def verify_submodules(checkout):
+    result = run_git(
+        ["git", "submodule", "status", "--recursive"],
+        cwd=checkout
+    )
+
+    for line in result.stdout.splitlines():
+        if line and line[0] in "-+":
+            raise RuntimeError(
+                "Submodule is missing or at an unexpected commit: " + line
+            )
 
 
 def replace_directory(new_dir, destination):
@@ -100,14 +160,15 @@ def replace_directory(new_dir, destination):
 def refresh(name, repository):
     destination = ROOT / name
     work = Path(tempfile.mkdtemp(prefix=".hmr-", dir=ROOT))
+
     checkout = work / "checkout"
     mirror = work / "mirror"
 
     try:
-        resolved_repository = resolve_repository(repository)
-        url = f"https://github.com/{resolved_repository}.git"
+        resolved = resolve_repository(repository)
+        url = f"https://github.com/{resolved}.git"
 
-        print(f"Downloading repository: {resolved_repository}")
+        print(f"Downloading: {resolved}")
 
         run_git([
             "git",
@@ -132,6 +193,8 @@ def refresh(name, repository):
                 "git lfs pull"
             ], cwd=checkout)
 
+        verify_submodules(checkout)
+
         shutil.copytree(
             checkout,
             mirror,
@@ -142,9 +205,11 @@ def refresh(name, repository):
         if not any(mirror.iterdir()):
             raise RuntimeError("Repository copy is empty")
 
+        verify_copy(checkout, mirror)
+
         replace_directory(mirror, destination)
 
-        print(f"OK: {name} <- {resolved_repository}")
+        print(f"SUCCESS: {name} <- {resolved}")
 
     finally:
         if work.exists():
@@ -153,12 +218,16 @@ def refresh(name, repository):
 
 def main():
     ROOT.mkdir(parents=True, exist_ok=True)
+
     errors = []
+
+    print("Starting HMR-ALL synchronization")
+    print(f"Total configured sources: {len(SOURCES)}")
 
     with ThreadPoolExecutor(max_workers=4) as executor:
         jobs = {
-            executor.submit(refresh, name, repo): name
-            for name, repo in SOURCES.items()
+            executor.submit(refresh, name, repository): name
+            for name, repository in SOURCES.items()
         }
 
         for job in as_completed(jobs):
@@ -168,18 +237,19 @@ def main():
                 job.result()
             except Exception as error:
                 errors.append(name)
-                print(f"ERROR: {name}: {error}")
+                print(f"FAILED: {name}: {error}")
 
-    print(f"\nTotal sources: {len(SOURCES)}")
+    print("\n========== SUMMARY ==========")
+    print(f"Total sources: {len(SOURCES)}")
+    print(f"Successful sources: {len(SOURCES) - len(errors)}")
     print(f"Failed sources: {len(errors)}")
 
     if errors:
         raise SystemExit(
-            "Some sources failed. Previous copies were preserved: "
-            + ", ".join(errors)
+            "Synchronization failed for: " + ", ".join(errors)
         )
 
-    print("All 12 repositories synchronized successfully!")
+    print("ALL 12 SOURCES SYNCHRONIZED AND VERIFIED!")
 
 
 if __name__ == "__main__":
