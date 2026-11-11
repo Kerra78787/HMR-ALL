@@ -1,8 +1,4 @@
-
-      - name: Update sources
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python update.py
+name: HMR-ALL Auto Update
 
 on:
   schedule:
@@ -28,7 +24,7 @@ jobs:
       - name: Install requests
         run: pip install requests
 
-            - name: Update sources
+      - name: Update sources
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python update.py
