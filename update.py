@@ -42,21 +42,23 @@ def safe_relative(path):
 
     p = PurePosixPath(path)
 
-    if p.is_absolute() or any(part in ("", ".", "..") for part in p.parts):
+    if p.is_absolute() or any(
+        part in ("", ".", "..") for part in p.parts
+    ):
         raise RuntimeError(f"Unsafe path: {path}")
 
     return Path(*p.parts)
 
 
 def make_session():
-    s = requests.Session()
-    s.headers["User-Agent"] = "HMR-ALL-Updater/3.0"
+    session = requests.Session()
+    session.headers["User-Agent"] = "HMR-ALL-Updater/4.0"
 
     token = os.getenv("GITHUB_TOKEN")
     if token:
-        s.headers["Authorization"] = f"Bearer {token}"
+        session.headers["Authorization"] = f"Bearer {token}"
 
-    return s
+    return session
 
 
 def get_json(session, url):
@@ -65,7 +67,79 @@ def get_json(session, url):
     return response.json()
 
 
-def refresh(name, repo, folder):
+def is_txt(path):
+    return (
+        path.lower().endswith(".txt")
+        and PurePosixPath(path).name.lower() not in EXCLUDED
+    )
+
+
+def resolve_source_folder(tree, configured_folder):
+    paths = [
+        item["path"]
+        for item in tree
+        if item["type"] in ("blob", "tree")
+    ]
+
+    if not configured_folder:
+        return ""
+
+    prefix = configured_folder + "/"
+
+    if any(
+        path == configured_folder or path.startswith(prefix)
+        for path in paths
+    ):
+        return configured_folder
+
+    # Old folder not found: discover the new folder.
+    counts = {}
+
+    for item in tree:
+        path = item["path"]
+
+        if item["type"] != "blob" or not is_txt(path):
+            continue
+
+        parts = PurePosixPath(path).parts
+
+        if len(parts) == 1:
+            candidate = ""
+        else:
+            candidate = parts[0]
+
+        counts[candidate] = counts.get(candidate, 0) + 1
+
+    if not counts:
+        raise RuntimeError(
+            f"Folder '{configured_folder}' missing; "
+            "no TXT folders found. Old files preserved."
+        )
+
+    highest = max(counts.values())
+    winners = [
+        folder for folder, count in counts.items()
+        if count == highest
+    ]
+
+    if len(winners) != 1:
+        raise RuntimeError(
+            f"New folder is ambiguous: {winners}. "
+            "Old files preserved."
+        )
+
+    new_folder = winners[0]
+
+    print(
+        f"FOLDER RENAME DETECTED: "
+        f"'{configured_folder}' -> "
+        f"'{new_folder or '[ROOT]'}'"
+    )
+
+    return new_folder
+
+
+def refresh(name, repo, configured_folder):
     session = make_session()
     api = f"https://api.github.com/repos/{repo}"
 
@@ -77,30 +151,21 @@ def refresh(name, repo, folder):
         f"{quote(branch, safe='')}?recursive=1"
     )
 
-    tree = get_json(session, tree_url)
+    tree_data = get_json(session, tree_url)
 
-    if tree.get("truncated"):
+    if tree_data.get("truncated"):
         raise RuntimeError(
-            "GitHub tree is incomplete; old files preserved"
+            "GitHub tree incomplete; old files preserved."
         )
 
-    prefix = f"{folder}/" if folder else ""
+    tree = tree_data["tree"]
 
-    if folder:
-        folder_exists = any(
-            item["path"] == folder
-            or item["path"].startswith(prefix)
-            for item in tree["tree"]
-        )
-
-        if not folder_exists:
-            raise RuntimeError(
-                f"Source folder not found: {folder}; old files preserved"
-            )
+    folder = resolve_source_folder(tree, configured_folder)
+    prefix = folder + "/" if folder else ""
 
     files = {}
 
-    for item in tree["tree"]:
+    for item in tree:
         path = item["path"]
 
         if item["type"] != "blob":
@@ -109,10 +174,7 @@ def refresh(name, repo, folder):
         if not path.startswith(prefix):
             continue
 
-        if not path.lower().endswith(".txt"):
-            continue
-
-        if PurePosixPath(path).name.lower() in EXCLUDED:
+        if not is_txt(path):
             continue
 
         relative = path[len(prefix):]
@@ -130,6 +192,11 @@ def refresh(name, repo, folder):
         response.raise_for_status()
 
         files[relative_path.as_posix()] = response.content
+
+    if not files:
+        raise RuntimeError(
+            "No TXT files found; old files preserved."
+        )
 
     destination = ROOT / name
     destination.mkdir(parents=True, exist_ok=True)
@@ -150,25 +217,27 @@ def refresh(name, repo, folder):
     new_files = set(files)
 
     # Download all files before changing local files.
-    # If a download fails, old files remain untouched.
     for relative, content in files.items():
         target = destination / safe_relative(relative)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(content)
 
-    # Remove files that were deleted or renamed upstream.
+    # Remove deleted or renamed TXT files.
     for relative in old_files - new_files:
         target = destination / safe_relative(relative)
 
         if target.is_file():
             target.unlink()
 
-    # Save the new manifest only after successful synchronization.
+    # Update manifest after successful synchronization.
     temp_manifest = destination / ".mirror-manifest.tmp"
+
     temp_manifest.write_text(
-        "\n".join(sorted(new_files)) + ("\n" if new_files else ""),
+        "\n".join(sorted(new_files))
+        + ("\n" if new_files else ""),
         encoding="utf-8"
     )
+
     temp_manifest.replace(manifest)
 
     print(f"OK: {name} — {len(files)} TXT files")
@@ -178,7 +247,9 @@ errors = []
 
 with ThreadPoolExecutor(max_workers=6) as executor:
     jobs = {
-        executor.submit(refresh, name, repo, folder): name
+        executor.submit(
+            refresh, name, repo, folder
+        ): name
         for name, (repo, folder) in SOURCES.items()
     }
 
@@ -190,6 +261,7 @@ with ThreadPoolExecutor(max_workers=6) as executor:
         except Exception as error:
             errors.append(name)
             print(f"ERROR: {name}: {error}")
+
 
 print(f"\nSources: {len(SOURCES)}")
 print(f"Errors: {len(errors)}")
