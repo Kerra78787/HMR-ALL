@@ -1,90 +1,68 @@
 
 import requests
-import re
-import base64
+from pathlib import Path
 
-SOURCES = [
-    "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
-    "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Original-Configs.txt",
-    "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/server.txt",
-    "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/sub.txt",
-    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
-    "https://raw.githubusercontent.com/svinakraft-maker/FlareFeed/main/public/podpiska.txt",
-    "https://raw.githubusercontent.com/alireza786786/Free-V2ray-Configs/main/servers/vless_servers.txt",
-    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY.txt",
-    "https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/Z.txt",
-    "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/vless.txt",
-    "https://raw.githubusercontent.com/histeenn/VLESS-PO-GRIBI/main/deploy/sub.txt",
-    "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/vless.txt",
-]
+SOURCES = {
+    "1-MustafaBaqer-vless.txt":
+        "https://raw.githubusercontent.com/MustafaBaqer/VestraNet-Nodes/main/protocols/vless.txt",
 
-ALLOWED = (
-    "vless://",
-    "vmess://",
-    "trojan://",
-)
+    "2-aviamastersgh-verified_configs.txt":
+        "https://raw.githubusercontent.com/aviamastersgh/vpn-free-russia/main/verified_configs.txt",
 
-nodes = set()
+    "3-R3ZARAHIMI-conf-week.txt":
+        "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/conf-week.txt",
 
-def extract(text):
-    text = text.strip()
+    "4-ALIILAPRO-server.txt":
+        "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/server.txt",
 
-    for _ in range(3):
-        if "://" in text:
-            break
+    "5-ermaozi-v2ray.txt":
+        "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
 
-        try:
-            compact = re.sub(r"\s+", "", text)
-            decoded = base64.b64decode(
-                compact + "=" * (-len(compact) % 4),
-                altchars=b"-_"
-            ).decode("utf-8", errors="ignore").strip()
+    "6-svinakraft-maker-podpiska.txt":
+        "https://raw.githubusercontent.com/svinakraft-maker/FlareFeed/main/public/podpiska.txt",
 
-            if not decoded or "://" not in decoded:
-                break
+    "7-alireza786786-vless_servers.txt":
+        "https://raw.githubusercontent.com/alireza786786/Free-V2ray-Configs/main/servers/vless_servers.txt",
 
-            text = decoded
+    "8-openproxylist-rawlist.txt":
+        "https://openproxylist.com/v2ray/rawlist/text",
 
-        except Exception:
-            break
+    "9-cbusifabcap-Z.txt":
+        "https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/Z.txt",
 
-    for line in text.splitlines():
-        line = line.strip().lstrip("\ufeff")
+    "10-0xRadikal-vless.txt":
+        "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/vless.txt",
 
-        if not line or line.startswith("#"):
-            continue
+    "11-histeenn-sub.txt":
+        "https://raw.githubusercontent.com/histeenn/VLESS-PO-GRIBI/main/deploy/sub.txt",
 
-        if line.lower().startswith(ALLOWED):
-            nodes.add(line)
+    "12-igareck-Reality.txt":
+        "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt",
+
+    "13-mrdevmohamed-All_Configs_Sub.txt":
+        "https://raw.githubusercontent.com/mrdevmohamed/v2ray-configs/main/All_Configs_Sub.txt",
+}
+
+folder = Path("Sources")
+folder.mkdir(parents=True, exist_ok=True)
 
 session = requests.Session()
-session.headers.update({
-    "User-Agent": "HMR-ALL-Subscription/1.0"
-})
+session.headers.update({"User-Agent": "HMR-ALL-Updater/1.0"})
 
-for url in SOURCES:
+success = 0
+
+for filename, url in SOURCES.items():
     try:
-        response = session.get(url, timeout=25)
+        response = session.get(url, timeout=40)
         response.raise_for_status()
 
-        before = len(nodes)
-        extract(response.text)
-        added = len(nodes) - before
+        (folder / filename).write_bytes(response.content)
 
-        print("OK:", url, "| New:", added)
+        success += 1
+        print("OK:", filename)
 
     except Exception as error:
-        print("ERROR:", url, error)
+        print("ERROR:", filename, error)
 
-with open("Text.txt", "w", encoding="utf-8") as file:
-    file.write("#profile-title: Text\n")
-    file.write("#profile-update-interval: 30\n")
-    file.write("\n".join(sorted(nodes)))
-
-    if nodes:
-        file.write("\n")
-
-print("Total sources:", len(SOURCES))
-print("Total unique configs:", len(nodes))
-print("Allowed protocols: VLESS, VMess, Trojan")
-    
+print("Sources:", len(SOURCES))
+print("Updated:", success)
