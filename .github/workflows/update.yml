@@ -1,5 +1,8 @@
 
-name: HMR-ALL Auto Update
+      - name: Update sources
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python update.py
 
 on:
   schedule:
