@@ -1,5 +1,5 @@
 
-name: Update Source Mirrors
+name: HMR-ALL Auto Update
 
 on:
   schedule:
