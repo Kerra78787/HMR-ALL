@@ -2,7 +2,9 @@
 import shutil
 import subprocess
 import tempfile
+import urllib.request
 from pathlib import Path
+from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
@@ -22,6 +24,37 @@ SOURCES = {
 }
 
 ROOT = Path("Sources")
+
+
+def resolve_repository(repository):
+    original_url = f"https://github.com/{repository}"
+
+    try:
+        request = urllib.request.Request(
+            original_url,
+            headers={"User-Agent": "HMR-ALL-Updater"}
+        )
+
+        with urllib.request.urlopen(request, timeout=30) as response:
+            final_url = response.geturl()
+
+        parsed = urlparse(final_url)
+        parts = parsed.path.strip("/").split("/")
+
+        if parsed.netloc.lower() == "github.com" and len(parts) >= 2:
+            owner = parts[0]
+            name = parts[1].removesuffix(".git")
+            resolved = f"{owner}/{name}"
+
+            if resolved.lower() != repository.lower():
+                print(f"Repository renamed or moved: {repository} -> {resolved}")
+
+            return resolved
+
+    except Exception as error:
+        print(f"Could not resolve redirect for {repository}: {error}")
+
+    return repository
 
 
 def run_git(command, cwd=None):
@@ -71,9 +104,10 @@ def refresh(name, repository):
     mirror = work / "mirror"
 
     try:
-        url = f"https://github.com/{repository}.git"
+        resolved_repository = resolve_repository(repository)
+        url = f"https://github.com/{resolved_repository}.git"
 
-        print(f"Downloading full repository: {repository}")
+        print(f"Downloading repository: {resolved_repository}")
 
         run_git([
             "git",
@@ -110,7 +144,7 @@ def refresh(name, repository):
 
         replace_directory(mirror, destination)
 
-        print(f"OK: {name} <- {repository}")
+        print(f"OK: {name} <- {resolved_repository}")
 
     finally:
         if work.exists():
@@ -145,7 +179,7 @@ def main():
             + ", ".join(errors)
         )
 
-    print("All 12 full repositories synchronized!")
+    print("All 12 repositories synchronized successfully!")
 
 
 if __name__ == "__main__":
