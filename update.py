@@ -18,12 +18,10 @@ SOURCES = [
     "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/vless.txt",
 ]
 
-BLOCKED = ("hysteria://", "hysteria2://", "tuic://", "ss://", "ssr://")
-
 ALLOWED = (
-    "vless://", "vmess://", "trojan://",
-    "socks://", "socks5://", "http://",
-    "anytls://", "mieru://", "ssh://", "wireguard://"
+    "vless://",
+    "vmess://",
+    "trojan://",
 )
 
 nodes = set()
@@ -34,35 +32,47 @@ def extract(text):
     for _ in range(3):
         if "://" in text:
             break
+
         try:
             compact = re.sub(r"\s+", "", text)
             decoded = base64.b64decode(
                 compact + "=" * (-len(compact) % 4),
                 altchars=b"-_"
             ).decode("utf-8", errors="ignore").strip()
+
             if not decoded or "://" not in decoded:
                 break
+
             text = decoded
+
         except Exception:
             break
 
     for line in text.splitlines():
         line = line.strip().lstrip("\ufeff")
-        lower = line.lower()
 
-        if not line or lower.startswith("#"):
+        if not line or line.startswith("#"):
             continue
-        if lower.startswith(BLOCKED):
-            continue
-        if lower.startswith(ALLOWED):
+
+        if line.lower().startswith(ALLOWED):
             nodes.add(line)
+
+session = requests.Session()
+session.headers.update({
+    "User-Agent": "HMR-ALL-Subscription/1.0"
+})
 
 for url in SOURCES:
     try:
-        response = requests.get(url, timeout=25)
+        response = session.get(url, timeout=25)
         response.raise_for_status()
+
+        before = len(nodes)
         extract(response.text)
-        print("OK:", url)
+        added = len(nodes) - before
+
+        print("OK:", url, "| New:", added)
+
     except Exception as error:
         print("ERROR:", url, error)
 
@@ -70,7 +80,11 @@ with open("Text.txt", "w", encoding="utf-8") as file:
     file.write("#profile-title: Text\n")
     file.write("#profile-update-interval: 30\n")
     file.write("\n".join(sorted(nodes)))
-    file.write("\n" if nodes else "")
 
-print("Sources:", len(SOURCES))
+    if nodes:
+        file.write("\n")
+
+print("Total sources:", len(SOURCES))
 print("Total unique configs:", len(nodes))
+print("Allowed protocols: VLESS, VMess, Trojan")
+    
