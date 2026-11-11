@@ -1,6 +1,5 @@
 anytls_servers.txt
 countries/albania.txt
-countries/armenia.txt
 countries/australia.txt
 countries/austria.txt
 countries/belarus.txt
@@ -28,7 +27,6 @@ countries/japan.txt
 countries/kazakhstan.txt
 countries/latvia.txt
 countries/lithuania.txt
-countries/luxembourg.txt
 countries/malaysia.txt
 countries/mexico.txt
 countries/moldova.txt
