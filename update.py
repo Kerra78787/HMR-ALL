@@ -1,3 +1,4 @@
+
 import requests
 import re
 import base64
@@ -17,36 +18,48 @@ SOURCES = [
     "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/vless.txt",
 ]
 
-ALLOWED = ("vless://", "vmess://", "trojan://", "ss://", "ssr://",
-           "hysteria://", "hysteria2://", "socks://", "socks5://", "http://")
+BLOCKED = ("hysteria://", "hysteria2://", "tuic://", "ss://", "ssr://")
+
+ALLOWED = (
+    "vless://", "vmess://", "trojan://",
+    "socks://", "socks5://", "http://",
+    "anytls://", "mieru://", "ssh://", "wireguard://"
+)
 
 nodes = set()
 
 def extract(text):
     text = text.strip()
-    if not text:
-        return
 
-    for _ in range(2):
+    for _ in range(3):
+        if "://" in text:
+            break
         try:
+            compact = re.sub(r"\s+", "", text)
             decoded = base64.b64decode(
-                text + "=" * (-len(text) % 4)
-            ).decode("utf-8", errors="ignore")
-            if "://" in decoded:
-                text = decoded
-            else:
+                compact + "=" * (-len(compact) % 4),
+                altchars=b"-_"
+            ).decode("utf-8", errors="ignore").strip()
+            if not decoded or "://" not in decoded:
                 break
+            text = decoded
         except Exception:
             break
 
     for line in text.splitlines():
-        line = line.strip()
-        if line.startswith(ALLOWED):
+        line = line.strip().lstrip("\ufeff")
+        lower = line.lower()
+
+        if not line or lower.startswith("#"):
+            continue
+        if lower.startswith(BLOCKED):
+            continue
+        if lower.startswith(ALLOWED):
             nodes.add(line)
 
 for url in SOURCES:
     try:
-        response = requests.get(url, timeout=20)
+        response = requests.get(url, timeout=25)
         response.raise_for_status()
         extract(response.text)
         print("OK:", url)
@@ -57,5 +70,7 @@ with open("Text.txt", "w", encoding="utf-8") as file:
     file.write("#profile-title: Text\n")
     file.write("#profile-update-interval: 30\n")
     file.write("\n".join(sorted(nodes)))
+    file.write("\n" if nodes else "")
 
-print("Total unique nodes:", len(nodes))
+print("Sources:", len(SOURCES))
+print("Total unique configs:", len(nodes))
