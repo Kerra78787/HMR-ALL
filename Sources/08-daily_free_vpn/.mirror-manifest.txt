@@ -1,1 +1,4 @@
+# HMR-ALL mirror manifest v2
+# source=cbusifabcap/daily_free_vpn
+# prefix=
 Z.txt

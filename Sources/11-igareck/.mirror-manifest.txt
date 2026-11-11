@@ -1,5 +1,7 @@
+# HMR-ALL mirror manifest v2
+# source=igareck/vpn-configs-for-russia
+# prefix=
 BLACK_SS+All_RUS.txt
-BLACK_SS_WEAK_DPI_RUS.txt
 BLACK_VLESS_RUS.txt
 BLACK_VLESS_RUS_mobile.txt
 Export/Base64/PROXIES_ONLY/BLACK_SS+All_RUS_base64.txt
@@ -16,12 +18,6 @@ Export/v2rayN_PC/Vless-Reality-White-Lists-Rus-Mobile-v2rayN.txt
 Export/v2rayN_PC/WHITE-CIDR-RU-all-v2rayN.txt
 Export/v2rayN_PC/WHITE-CIDR-RU-checked-v2rayN.txt
 Export/v2rayN_PC/WHITE-SNI-RU-all-v2rayN.txt
-TOR-BRIDGES/TOR_BRIDGES_ALL.txt
-TOR-BRIDGES/TOR_BRIDGES_OBFS4.txt
-TOR-BRIDGES/TOR_BRIDGES_TOP100.txt
-TOR-BRIDGES/TOR_BRIDGES_VANILLA.txt
-TOR-BRIDGES/TOR_BRIDGES_WEBTUNNEL.txt
 Vless-Reality-White-Lists-Rus-Mobile.txt
 WHITE-CIDR-RU-all.txt
 WHITE-CIDR-RU-checked.txt
-WHITE-SNI-RU-all.txt

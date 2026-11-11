@@ -1,3 +1,6 @@
+# HMR-ALL mirror manifest v2
+# source=histeenn/VLESS-PO-GRIBI
+# prefix=deploy
 sub.txt
 sub_base64.txt
 subscriptions/1.txt
@@ -5,7 +8,6 @@ subscriptions/10.txt
 subscriptions/11.txt
 subscriptions/12.txt
 subscriptions/13.txt
-subscriptions/14.txt
 subscriptions/15.txt
 subscriptions/16.txt
 subscriptions/17.txt
@@ -15,10 +17,8 @@ subscriptions/2.txt
 subscriptions/20.txt
 subscriptions/21.txt
 subscriptions/22.txt
-subscriptions/23.txt
 subscriptions/24.txt
 subscriptions/25.txt
-subscriptions/3.txt
 subscriptions/4.txt
 subscriptions/5.txt
 subscriptions/6.txt

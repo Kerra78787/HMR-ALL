@@ -1,3 +1,6 @@
+# HMR-ALL mirror manifest v2
+# source=R3ZARAHIMI/tg-v2ray-configs-every2h
+# prefix=
 Config_jo.txt
 Config_jo_Light.txt
 Config_no_cf.txt
@@ -10,4 +13,3 @@ regions/conf-NL.txt
 regions/conf-TR.txt
 regions/conf-UK.txt
 regions/conf-US.txt
-requirements.txt

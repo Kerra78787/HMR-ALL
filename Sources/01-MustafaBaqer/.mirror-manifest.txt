@@ -1,8 +1,6 @@
-hy2.txt
-mtproto.txt
-shadowsocks.txt
+# HMR-ALL mirror manifest v2
+# source=MustafaBaqer/VestraNet-Nodes
+# prefix=protocols
 trojan.txt
-tuic.txt
 vless.txt
 vmess.txt
-wireguard.txt

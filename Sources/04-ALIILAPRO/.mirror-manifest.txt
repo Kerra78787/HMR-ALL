@@ -1,2 +1,5 @@
+# HMR-ALL mirror manifest v2
+# source=ALIILAPRO/v2rayNG-Config
+# prefix=
 server.txt
 sub.txt

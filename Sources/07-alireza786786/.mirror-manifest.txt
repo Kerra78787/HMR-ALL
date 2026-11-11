@@ -1,5 +1,6 @@
-anytls_servers.txt
-countries/albania.txt
+# HMR-ALL mirror manifest v2
+# source=alireza786786/Free-V2ray-Configs
+# prefix=servers
 countries/australia.txt
 countries/austria.txt
 countries/belarus.txt
@@ -20,7 +21,6 @@ countries/greece.txt
 countries/hong_kong.txt
 countries/india.txt
 countries/iran.txt
-countries/ireland.txt
 countries/israel.txt
 countries/italy.txt
 countries/japan.txt
@@ -31,7 +31,6 @@ countries/malaysia.txt
 countries/mexico.txt
 countries/moldova.txt
 countries/netherlands.txt
-countries/norway.txt
 countries/poland.txt
 countries/romania.txt
 countries/russia.txt
@@ -39,7 +38,6 @@ countries/serbia.txt
 countries/seychelles.txt
 countries/singapore.txt
 countries/slovenia.txt
-countries/south_africa.txt
 countries/south_korea.txt
 countries/spain.txt
 countries/sweden.txt
@@ -51,17 +49,8 @@ countries/ukraine.txt
 countries/united_arab_emirates.txt
 countries/united_kingdom.txt
 countries/united_states.txt
-emergency_socks5.txt
-hysteria2_servers.txt
-hysteria_servers.txt
 lite.txt
 no_cloudflare.txt
-socks4_servers.txt
-socks5_servers.txt
-ss_servers.txt
-ssr_servers.txt
 trojan_servers.txt
-tuic_servers.txt
 vless_servers.txt
 vmess_servers.txt
-wireguard_servers.txt
