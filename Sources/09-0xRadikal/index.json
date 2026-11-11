@@ -1,11 +1,11 @@
 {
   "brand": "@Raydikalx",
   "generator": "RaydikalxBot aggregator",
-  "updated_at": "2026-11-11T17:15:14.409904+00:00",
-  "updated_at_unix": 1794417314,
-  "next_update_eta": "2026-11-11T17:30:14.409904+00:00",
+  "updated_at": "2026-11-11T17:45:24.069934+00:00",
+  "updated_at_unix": 1794419124,
+  "next_update_eta": "2026-11-11T18:00:24.069934+00:00",
   "update_interval_minutes": 15,
-  "elapsed_seconds": 20.0,
+  "elapsed_seconds": 24.2,
   "raw_base": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main",
   "cdn_base": "https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main",
   "primary_base": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main",
@@ -23,17 +23,17 @@
   },
   "categories": {
     "all": {
-      "unique": 11087,
+      "unique": 11057,
       "broken": 1,
-      "duplicates": 8981,
+      "duplicates": 9011,
       "total_fetched": 20081,
       "active_sources": 10,
       "protocols": {
-        "vless": 4518,
-        "vmess": 4051,
-        "trojan": 1478,
-        "shadowsocks": 821,
-        "hysteria2": 217,
+        "vless": 4495,
+        "vmess": 4066,
+        "trojan": 1466,
+        "shadowsocks": 816,
+        "hysteria2": 212,
         "shadowsocksr": 2
       },
       "files": {
@@ -48,17 +48,17 @@
       }
     },
     "heavy": {
-      "unique": 6470,
+      "unique": 6432,
       "broken": 1,
-      "duplicates": 5956,
+      "duplicates": 5994,
       "total_fetched": 12438,
       "active_sources": 4,
       "protocols": {
-        "vless": 3929,
-        "trojan": 1358,
-        "shadowsocks": 761,
-        "vmess": 383,
-        "hysteria2": 37,
+        "vless": 3905,
+        "trojan": 1345,
+        "shadowsocks": 757,
+        "vmess": 391,
+        "hysteria2": 32,
         "shadowsocksr": 2
       },
       "files": {
@@ -98,11 +98,11 @@
     }
   },
   "protocols": {
-    "vless": 4518,
-    "vmess": 4051,
-    "trojan": 1478,
-    "shadowsocks": 821,
-    "hysteria2": 217,
+    "vless": 4495,
+    "vmess": 4066,
+    "trojan": 1466,
+    "shadowsocks": 816,
+    "hysteria2": 212,
     "shadowsocksr": 2,
     "hysteria": 0,
     "tuic": 0,
@@ -154,7 +154,7 @@
   },
   "cascade_categories": {
     "verified": {
-      "unique": 1176,
+      "unique": 1169,
       "criterion": "a real proxied request succeeded in ALL rounds of this run",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt",
@@ -168,7 +168,7 @@
       }
     },
     "fast": {
-      "unique": 778,
+      "unique": 800,
       "criterion": "verified AND median delay across all rounds is under the threshold",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/configs.txt",
@@ -182,7 +182,7 @@
       }
     },
     "secure": {
-      "unique": 804,
+      "unique": 805,
       "criterion": "verified AND forward secrecy ((EC)DHE via TLS/REALITY/QUIC) AND certificate validation not disabled",
       "files": {
         "configs_txt": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt",
@@ -203,8 +203,8 @@
     "url_mirror": "https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/top100.txt"
   },
   "countries": {
-    "count": 43,
-    "configs": 1176,
+    "count": 46,
+    "configs": 1169,
     "source": "verified",
     "criterion": "verified configs grouped by the server's country (GeoIP); one .txt per country",
     "index": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/Countries/index.json",

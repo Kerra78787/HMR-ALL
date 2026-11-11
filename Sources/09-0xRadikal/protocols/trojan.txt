@@ -3,7 +3,7 @@
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #support-url: https://t.me/raydikalx
 #profile-web-page-url: https://github.com/0xRadikal/Free-v2ray-Configs
-# @Raydikalx — trojan — 1478 configs
+# @Raydikalx — trojan — 1466 configs
 trojan://%21str18844@49.212.193.129:443?type=tcp#JP 🇯🇵 | @Raydikalx | 7D91F6
 trojan://!str18844@zxcvbn@os-tr-2.cats22.net:443#JP 🇯🇵 | @Raydikalx | F278EA
 trojan://!str18844@zxcvbn@os-tr-3.cats22.net:443#JP 🇯🇵 | @Raydikalx | ED4401
@@ -44,7 +44,8 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@139.84.231.142:443?security=tls&fp=chr
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@149.28.130.108:443?sni=searchcreativejobsandshowcaseyourartistictalents.com&type=tcp#SG 🇸🇬 | @Raydikalx | E75317
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@149.28.130.108:443?security=tls&sni=searchcreativejobsandshowcaseyourartistictalents.com#SG 🇸🇬 | @Raydikalx | D156D8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?allowInsecure=0&sni=exploredigitaljobplatformandfindonlinework.com#SG 🇸🇬 | @Raydikalx | BB2FE8
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?security=tls&headerType=none&type=tcp&allowInsecure=0&sni=exploredigitaljobplatformandfindonlinework.com#SG 🇸🇬 | @Raydikalx | E9C28A
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?security=tls&sni=exploredigitaljobplatformandfindonlinework.com#SG 🇸🇬 | @Raydikalx | E9C28A
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?allowInsecure=1&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | @Raydikalx | 75B776
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#KR 🇰🇷 | @Raydikalx | DE0128
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@167.179.108.225:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=discoverparttimepositionsandsupplementyourincomeguide.com#JP 🇯🇵 | @Raydikalx | 93578B
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@167.88.61.175:443?sni=blog.browseseniorrolesandenhanceyourcareertoday.com&type=tcp#US 🇺🇸 | @Raydikalx | D36BFB
@@ -64,7 +65,6 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@167.88.61.85:443?security=tls&insecure
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.169:443?allowInsecure=1&type=tcp#US 🇺🇸 | @Raydikalx | F2A0CA
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.169:443?allowInsecure=1&sni=169.197.140.169&type=tcp#US 🇺🇸 | @Raydikalx | F044F6
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.169:443?sni=api.discoverfreshgraduatejobsstartyourprofessionaljourney.com&type=tcp#US 🇺🇸 | @Raydikalx | 881B69
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.169:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.discoverfreshgraduatejobsstartyourprofessionaljourney.com#US 🇺🇸 | @Raydikalx | E9E3E3
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.171:443?sni=cdn.discoverfreshgraduatejobsstartyourprofessionaljourney.com&type=tcp#US 🇺🇸 | @Raydikalx | 0CB14F
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.171:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=cdn.discoverfreshgraduatejobsstartyourprofessionaljourney.com#US 🇺🇸 | @Raydikalx | 7D19A9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.208:443?security=tls&sni=blog.discoverfreshgraduatejobsstartyourprofessionaljourney.com&type=tcp#US 🇺🇸 | @Raydikalx | A7D9EA
@@ -81,7 +81,6 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.112:443?security=tls&insec
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.131:443?sni=blog.explorecreativejobsandenhanceyourcareerportfolio.com&type=tcp#US 🇺🇸 | @Raydikalx | FE1AD2
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.131:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=blog.explorecreativejobsandenhanceyourcareerportfolio.com#US 🇺🇸 | @Raydikalx | DF2334
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.19:443?sni=learn.explorecreativejobsandenhanceyourcareerportfolio.com&type=tcp#US 🇺🇸 | @Raydikalx | C23131
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.19:443?security=tls&sni=learn.explorecreativejobsandenhanceyourcareerportfolio.com#US 🇺🇸 | @Raydikalx | 6E20D3
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.211:443?allowInsecure=1&sni=api.explorecreativejobsandenhanceyourcareerportfolio.com&type=tcp#US 🇺🇸 | @Raydikalx | A08D26
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.211:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.explorecreativejobsandenhanceyourcareerportfolio.com#US 🇺🇸 | @Raydikalx | 18FC9B
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.237:443?security=tls#US 🇺🇸 | @Raydikalx | B7861A
@@ -107,7 +106,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.96:443?sni=learn.iloveruss
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.96:443?security=tls&sni=learn.iloverussia2026.com#DE 🇩🇪 | @Raydikalx | 94738A
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443#CH 🇨🇭 | @Raydikalx | FB69CD
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=api.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @Raydikalx | 8433E8
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443#CH 🇨🇭 | @Raydikalx | 4EFF3D
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?#CH 🇨🇭 | @Raydikalx | 4EFF3D
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?sni=www.yourultimateprofessionalcareerhub.com&type=tcp#CH 🇨🇭 | @Raydikalx | 252CA9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.19:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=www.yourultimateprofessionalcareerhub.com#CH 🇨🇭 | @Raydikalx | 0EB917
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443#CH 🇨🇭 | @Raydikalx | 08929B
@@ -127,7 +126,6 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.46:443?security=tls#US �
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.46:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=cdn.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | @Raydikalx | FB18EA
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.66:443?security=tls&fp=chrome&sni=www.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | @Raydikalx | 7DB317
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.82:443?fp=chrome&sni=courses.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | @Raydikalx | D429FC
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.82:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=courses.findlocaljobnetworkandbuildcommunityconnections.com#US 🇺🇸 | @Raydikalx | F195D8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?sni=learn.connectingpeoplewithgreatjobs.com&type=tcp#CA 🇨🇦 | @Raydikalx | 65E3BE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=learn.connectingpeoplewithgreatjobs.com#CA 🇨🇦 | @Raydikalx | A9E2DE
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.201:443?sni=resources.connectingpeoplewithgreatjobs.com&type=tcp#CA 🇨🇦 | @Raydikalx | B897AE
@@ -188,12 +186,14 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.238.80.100:443?security=tls&insecu
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?allowInsecure=1&type=tcp#AU 🇦🇺 | @Raydikalx | 4787DF
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?allowInsecure=1&sni=45.63.30.142&type=tcp#AU 🇦🇺 | @Raydikalx | FAFA65
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?allowInsecure=1&sni=connectwithemployerstohireyouridealteam.com&type=tcp#AU 🇦🇺 | @Raydikalx | 063CD6
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?security=tls&sni=connectwithemployerstohireyouridealteam.com&path=/#AU 🇦🇺 | @Raydikalx | 05791C
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?security=tls&sni=connectwithemployerstohireyouridealteam.com#AU 🇦🇺 | @Raydikalx | 373E2E
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.163.182:443?allowInsecure=1&sni=exploreeducationsectoropportunitiestodayandadvancecareers.com&type=tcp#IL 🇮🇱 | @Raydikalx | 7C445A
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.163.182:443?security=tls&insecure=0&host=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&headerType=none&type=tcp&allowInsecure=0&sni=exploreeducationsectoropportunitiestodayandadvancecareers.com#IL 🇮🇱 | @Raydikalx | 60EE8A
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?sni=advanceyouremploymentskillsandcareerdevelopmenthub.com&type=tcp#CL 🇨🇱 | @Raydikalx | 3679D3
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?security=tls&sni=advanceyouremploymentskillsandcareerdevelopmenthub.com#CL 🇨🇱 | @Raydikalx | 1C085E
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=1&sni=66.163.112.121&type=tcp#US 🇺🇸 | @Raydikalx | CFA29A
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=0&sni=www.unlockyourfuturefindyourperfectcareer.com#US 🇺🇸 | @Raydikalx | 4934D4
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&sni=www.unlockyourfuturefindyourperfectcareer.com#US 🇺🇸 | @Raydikalx | 4E295C
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?allowInsecure=1&sni=66.163.112.13&type=tcp#US 🇺🇸 | @Raydikalx | 67F66B
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?allowInsecure=1&sni=api.nextjobopportunityandclaimyouridealrole.com&type=tcp#US 🇺🇸 | @Raydikalx | 186908
@@ -258,10 +258,9 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.107:443?security=tls&insecu
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.154:443#NL 🇳🇱 | @Raydikalx | C840D5
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.154:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=www.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @Raydikalx | B8902A
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443#NL 🇳🇱 | @Raydikalx | 0F27E9
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443?sni=indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @Raydikalx | 8B573E
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.155:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @Raydikalx | 4C40A9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.215:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=courses.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @Raydikalx | 3D936F
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.225:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=cdn.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @Raydikalx | A34B18
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.225:443?security=tls&sni=cdn.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @Raydikalx | A34B18
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.44:443?security=tls&fp=chrome&sni=learn.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @Raydikalx | A5AEF2
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.9:443?fp=chrome&sni=resources.indyourperfectremotetechjobfromthecomfortofhome.com#NL 🇳🇱 | @Raydikalx | 86D8CB
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@70.34.207.14:443?security=tls&sni=searchhealthcarejobsandbuildmedicalcareerpathway.com#SE 🇸🇪 | @Raydikalx | A7EA6C
@@ -450,7 +449,6 @@ trojan://4863e1b2-ec2f-4c71-b862-ce533028e57e@185.107.56.55:443?security=tls&sni
 trojan://48d435ae12ff0704baa7de0780d5dab5@ja304.magiclampcloud.cn:59443?sni=ja304.magiclampcloud.cn&type=tcp#CN 🇨🇳 | @Raydikalx | 361F35
 trojan://497f2520-9538-11f1-8291-1239d0255272@uk1.test3.net:443?security=tls&sni=chatbuzzteam.ir&insecure=1&allowInsecure=1&type=tcp&headerType=none#GB 🇬🇧 | @Raydikalx | 983A0B
 trojan://49aebff08369239f0adc7c8512c995ec@ja262.magiclampcloud.cn:59443?allowInsecure=1&sni=ja262.magiclampcloud.cn&type=tcp#CN 🇨🇳 | @Raydikalx | E3D740
-trojan://4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA@188.241.241.122:443?security=tls&sni=de2.dedushka.top&alpn=http/1.1&type=tcp&headerType=none#DE 🇩🇪 | @Raydikalx | 937AFD
 trojan://4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA@de6.dedushka.top:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=de6.dedushka.top#DE 🇩🇪 | @Raydikalx | 103589
 trojan://4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA@de7.dedushka.top:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=de7.dedushka.top#DE 🇩🇪 | @Raydikalx | 23EB08
 trojan://4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA@de9.dedushka.top:443?security=tls&alpn=http/1.1&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=de9.dedushka.top#DE 🇩🇪 | @Raydikalx | 6B3EAD
@@ -517,10 +515,8 @@ trojan://5t6i121em5lkmsmk@108.61.177.57:16778?security=tls&insecure=0&headerType
 trojan://5t6i121em5lkmsmk@130.94.19.95:57277?security=tls&headerType=none&fp=firefox&type=tcp&allowInsecure=0&sni=us001.zestapp778.com#US 🇺🇸 | @Raydikalx | 4D35E7
 trojan://5t6i121em5lkmsmk@136.244.91.14:51520?sni=de001.zestapp778.com&type=tcp&fp=chrome#DE 🇩🇪 | @Raydikalx | C69D78
 trojan://5t6i121em5lkmsmk@149.248.50.252:46977?sni=ca001.zestapp778.com&type=tcp#CA 🇨🇦 | @Raydikalx | 96DA13
-trojan://5t6i121em5lkmsmk@216.128.185.90:46977?sni=ca001.zestapp778.com#CA 🇨🇦 | @Raydikalx | AC354B
 trojan://5t6i121em5lkmsmk@216.128.185.90:46977?security=tls&sni=ca001.zestapp778.com#CA 🇨🇦 | @Raydikalx | 5B0528
 trojan://5t6i121em5lkmsmk@38.60.233.126:33079?security=tls&sni=th001.zestapp778.com&type=tcp&allowInsecure=0#TH 🇹🇭 | @Raydikalx | 324DD7
-trojan://5t6i121em5lkmsmk@45.77.54.204:51520?allowInsecure=1&fp=chrome#DE 🇩🇪 | @Raydikalx | 8737B2
 trojan://5t6i121em5lkmsmk@45.77.54.204:51520?fp=chrome&sni=de001.zestapp778.com#DE 🇩🇪 | @Raydikalx | BEC4C0
 trojan://5t6i121em5lkmsmk@au001.zestapp778.com:54374?sni=au001.zestapp778.com&allowInsecure=1&type=tcp#AU 🇦🇺 | @Raydikalx | 1AED59
 trojan://5t6i121em5lkmsmk@au001.zestapp778.com:54374?type=tcp&security=tls&fp=chrome&sni=au001.zestapp778.com#AU 🇦🇺 | @Raydikalx | 52AF17
@@ -534,7 +530,7 @@ trojan://5t6i121em5lkmsmk@kr002.zestapp778.com:48851?allowInsecure=1&sni=kr002.z
 trojan://5t6i121em5lkmsmk@mx001.zestapp778.com:15083?type=tcp#MX 🇲🇽 | @Raydikalx | 4A012F
 trojan://5t6i121em5lkmsmk@mx001.zestapp778.com:15083?allowInsecure=1&sni=mx001.zestapp778.com&type=tcp#MX 🇲🇽 | @Raydikalx | 550EF9
 trojan://5t6i121em5lkmsmk@th001.zestapp778.com:33079?allowInsecure=1&sni=th001.zestapp778.com&type=tcp#TH 🇹🇭 | @Raydikalx | 5B2CEE
-trojan://5t6i121em5lkmsmk@th001.zestapp778.com:33079?security=tls&sni=th001.zestapp778.com#TH 🇹🇭 | @Raydikalx | 093A6B
+trojan://5t6i121em5lkmsmk@th001.zestapp778.com:33079?type=tcp&security=tls&fp=chrome&sni=th001.zestapp778.com#TH 🇹🇭 | @Raydikalx | 093A6B
 trojan://5t6i121em5lkmsmk@us001.zestapp778.com:57277?allowInsecure=1&sni=us001.zestapp778.com&type=tcp#US 🇺🇸 | @Raydikalx | 1DF37F
 trojan://5t6i121em5lkmsmk@us001.zestapp778.com:57277?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&sni=us001.zestapp778.com#US 🇺🇸 | @Raydikalx | E0FE0F
 trojan://5t6i121em5lkmsmk@us007.zestapp778.com:42314?allowInsecure=1&type=tcp#US 🇺🇸 | @Raydikalx | AEAA37
@@ -578,7 +574,6 @@ trojan://6c79e6675554006e607c490a168617ce@ja262.magiclampcloud.cn:59443?allowIns
 trojan://6c862415-30d2-4813-8e49-42e99a0bd415@104.16.72.101:443?security=tls&sni=space.byu.id.yxls.eu.cc&insecure=0&allowInsecure=0&type=ws&host=space.byu.id.yxls.eu.cc&path=/us-gllc@soskeynets#CA 🇨🇦 | @Raydikalx | CE4646
 trojan://6c8f2de0-48a2-11f0-bdd4-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @Raydikalx | 4228C6
 trojan://6cb6f769-b28e-4f7f-a593-8c0b0a161992@170.187.231.189:443?#SG 🇸🇬 | @Raydikalx | 05BF26
-trojan://6cddea99-9b18-4d42-8638-131bd9f5374f@jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net:443?security=tls&insecure=1&headerType=&type=tcp&allowInsecure=1&sni=8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net#Global 🌐 | @Raydikalx | 723B44
 trojan://6cf097b0-0a7d-11f0-88f5-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | @Raydikalx | 04D863
 trojan://6cf097b0-0a7d-11f0-88f5-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @Raydikalx | 8D59E3
 trojan://6d0a7f2f-c26c-466a-8f90-d6630ba97928@137.184.120.86:443/?type=tcp&security=tls&sni=829D7BDE-64B9-E759-C661-78BC73E582A0.1c2871ba-6025-61e2-e87f-a5c9e0ac8c1d.9d8f269f96b25232-759cbb36d6548597.kaufen&alpn=http%2F1.1&allowInsecure=1&fp=chrome#US 🇺🇸 | @Raydikalx | 8097DD
@@ -838,7 +833,6 @@ trojan://a6667237f0272b408e55cec8c3ebde8e@ja262.magiclampcloud.cn:59443?type=tcp
 trojan://a6xjq4UD2t@ir1.iobase.ir:443/?type=tcp&security=tls&alpn=http%2F1.1&allowInsecure=1&fp=chrome#IR 🇮🇷 | @Raydikalx | 2E83A5
 trojan://a74c18e385d4df373ae7871c331cc88b@tyy129.magiclampcloud.com:59443?sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | @Raydikalx | C36D6B
 trojan://a75243d0f5c2e31bd6c8c118b4f6442f81ad@176.122.173.224:443?allowInsecure=1&sni=www.cloudflare.com#US 🇺🇸 | @Raydikalx | 3AA5A2
-trojan://a75243d0f5c2e31bd6c8c118b4f6442f81ad@176.122.173.224:443?security=tls&sni=www.cloudflare.com#US 🇺🇸 | @Raydikalx | 52B773
 trojan://a7c7bbf0-48a1-11f0-b880-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @Raydikalx | 515177
 trojan://a967a0bdb0a9aee1d9581130a2dcd19a@ja304.magiclampcloud.cn:59443?allowInsecure=1&sni=ja304.magiclampcloud.cn&type=tcp#CN 🇨🇳 | @Raydikalx | A883CD
 trojan://aa47bc798fe7d60f6e1e56fb32d2954a@tyy129.magiclampcloud.com:59443?allowInsecure=1&sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | @Raydikalx | 04DD3A
@@ -1079,7 +1073,6 @@ trojan://f142bc50-b755-11ef-ad1a-1239d0255272@uk1.test3.net:443?sni=chatbuzzteam
 trojan://f1f6dad0-0622-11f0-92c5-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&type=tcp&allowInsecure=1#GB 🇬🇧 | @Raydikalx | C46AB4
 trojan://f1f6dad0-0622-11f0-92c5-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB 🇬🇧 | @Raydikalx | D4E931
 trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?sni=www.microsoft.com&allowInsecure=1&type=tcp&fp=chrome#JP 🇯🇵 | @Raydikalx | 7353B1
-trojan://f426d3c9-fb43-43c0-868b-898dfa451a74@121.127.33.130:443?security=tls&sni=likejennie.pages.dev&fp=chrome&type=ws&host=likejennie.pages.dev&path=/#SE 🇸🇪 | @Raydikalx | 029B2A
 trojan://f53247e0-fd1e-11ef-8370-1239d0255272@51.38.65.155:443?security=tls&sni=vkvd127.mycdn.me&allowInsecure=1&fp=chrome&type=tcp#GB 🇬🇧 | @Raydikalx | 01557F
 trojan://f53247e0-fd1e-11ef-8370-1239d0255272@uk1.test3.net:443?type=tcp&sni=wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc&allowInsecure=1&fp=chrome#GB 🇬🇧 | @Raydikalx | 1FE512
 trojan://f53d2b849a03b2e06fd1c1a04968aff6@tyy129.magiclampcloud.com:59443?allowInsecure=1&sni=tyy129.magiclampcloud.com&type=tcp#CN 🇨🇳 | @Raydikalx | E863F6
@@ -1126,7 +1119,6 @@ trojan://FnF2E0fmnd@146.190.86.235:443?sni=dl-media.viber.com&fp=chrome&alpn=htt
 trojan://fsoOufuTGmSKzRDaAwAbww@178.63.244.9:443?security=none&type=tcp#DE 🇩🇪 | @Raydikalx | BD46B5
 trojan://GbeGE_MwDQ_2Q_0b9RgdZd07ChS3mMLz@ir1.wufpel.ir:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=bf0264eb50014997.wufpel.ir#IR 🇮🇷 | @Raydikalx | 8086C4
 trojan://gHQP0D7D15@104.25.239.113:2053?insecure=0&allowInsecure=0&security=tls&sni=marvdasht.phonecomparisonblog.org&path=/&type=ws#CA 🇨🇦 | @Raydikalx | C063BC
-trojan://gHQP0D7D15@172.67.118.45:2053?path=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&insecure=0&type=ws&allowInsecure=0&sni=marvdasht.phonecomparisonblog.org#CA 🇨🇦 | @Raydikalx | 7B50F6
 trojan://gHQP0D7D15@172.67.118.45:2053?security=tls&insecure=0&type=ws&allowInsecure=0&sni=marvdasht.phonecomparisonblog.org#CA 🇨🇦 | @Raydikalx | 7D0EC0
 trojan://GToK9gzuwh@146.190.84.34:443?allowInsecure=0&sni=aka.ms#SG 🇸🇬 | @Raydikalx | 4063B6
 trojan://GUGm7DHtpSx7SuPyUD@45.139.194.80:443?alpn=h2%2Chttp%2F1.1&type=tcp#EE 🇪🇪 | @Raydikalx | F2D63C
@@ -1260,6 +1252,7 @@ trojan://IQ68037294@34.253.182.161:443?allowInsecure=1&sni=moving-wren.rooster46
 trojan://IQ68037294@91.199.84.39:443?sni=magical-kodiak.rooster465.autos&fp=chrome&type=tcp&path=%2f#HK 🇭🇰 | @Raydikalx | B73B0C
 trojan://IQ68037294@giving-bird.rooster465.autos:443?security=tls&sni=giving-bird.rooster465.autos#JP 🇯🇵 | @Raydikalx | BD329F
 trojan://IQ68037294@pleased-sawfly.rooster465.autos:443#SG 🇸🇬 | @Raydikalx | F69ED3
+trojan://IY_3c4apu-y6GUQv@oeptestwqee-production.up.railway.app:443?path=/api/CDSqFt&security=tls&alpn=http/1.1&insecure=0&host=oeptestwqee-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=oeptestwqee-production.up.railway.app#SG 🇸🇬 | @Raydikalx | 2830C1
 trojan://iyinglong@18.140.67.76:443?security=tls#SG 🇸🇬 | @Raydikalx | 7CCFB5
 trojan://j0GM8nFJVq@167.71.209.134:443?sni=aka.ms&fp=chrome&alpn=http%2F1.1&type=tcp#SG 🇸🇬 | @Raydikalx | A24CE2
 trojan://j8HSz13mcSpcbzQD-jxhNt3T99NLzgMB@nl4.275.axolab.org:443?sni=nl4.275.axolab.org&fp=chrome&alpn=h2%2Chttp%2F1.1&type=tcp#NL 🇳🇱 | @Raydikalx | 023561
@@ -1297,7 +1290,6 @@ trojan://mitivpn@151.101.36.244:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece
 trojan://MiTiVPN@151.101.36.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN?ed#US 🇺🇸 | @Raydikalx | 3135A3
 trojan://MiTiVPN@151.101.36.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=Abu.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @Raydikalx | 26F46F
 trojan://MiTiVPN@151.101.36.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=&security=tls&alpn=http/1.1&insecure=0&host=Abu.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @Raydikalx | F199AE
-trojan://MiTiVPN@151.101.36.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-vip-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @Raydikalx | 8DD865
 trojan://MiTiVPN@151.101.56.230:443?security=tls&sni=ssl.fastly.com&alpn=http/1.1&fp=chrome&allowinsecure=0&type=ws&host=MiTiVPN-MiTiVPN-MiTiVPN---MiTiVPN--MiTiVPN.global.ssl.fastly.net&path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN#US 🇺🇸 | @Raydikalx | 864FF1
 trojan://MiTiVPN@151.101.56.255:443?security=tls&alpn=http/1.1&insecure=0&host=mitivpn---nl--s---mitivpn-2.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | 265BF5
 trojan://MiTIVPN@151.101.56.56:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/D-e2@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-66e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | 721F07
@@ -1316,7 +1308,6 @@ trojan://MiTiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece2
 trojan://MiTiVPN@167.82.64.120:443?security=tls&sni=community.fastly.steamstatic.com&fp=chrome&alpn=http/1.1&insecure=0&allowInsecure=0&pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&type=ws&host=mitivpn--mitivpn-mitivpn.ac.ir&path=/#US 🇺🇸 | @Raydikalx | 87A654
 trojan://MiTiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http/1.1&insecure=0&host=mitivpn--mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | @Raydikalx | 221BD0
 trojan://MiTiVPN@167.82.64.120:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&security=tls&alpn=http/1.1&insecure=0&host=mitivpn--mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | @Raydikalx | 8BA62E
-trojan://MiTiVPN@167.82.64.160:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mitivpn--mitivpn----mitivpn----mitivpn----viiip.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @Raydikalx | EB8C51
 trojan://mitivpn@167.82.64.46:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | @Raydikalx | 28E51C
 trojan://mitivpn@167.82.64.46:443?insecure=0&type=ws&host=mitivpn-mitivpn.ac.ir&path=/?DailyConfigs--DailyConfigs--DailyConfigs?ed=2048&security=tls&sni=firefox.com&fp=chrome&allowInsecure=0&pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&alpn=http/1.1#US 🇺🇸 | @Raydikalx | F79333
 trojan://mitivpn@167.82.64.46:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET&security=tls&alpn=http/1.1&insecure=0&host=mitivpn-mitivpn.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=firefox.com#US 🇺🇸 | @Raydikalx | 1038C2
@@ -1328,15 +1319,12 @@ trojan://MiTiVPN@167.82.64.7:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236
 trojan://mitivpn@167.82.76.27:443?path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-3.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | AF02C0
 trojan://MiTIVPN@167.82.76.7:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/D-e2@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-33e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | EDCFEE
 trojan://MITIVpN@167.82.76.7:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/NLSus---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-33e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | 5E26F4
-trojan://MITIVPN@167.82.76.7:443?path=@bored_vpn&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-33s.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | 041520
 trojan://mitivpn@188.114.97.6:443?path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=d-e.mitivpn.in.net&fp=chrome&ech=cloudflare-ech.com+udp://78.157.42.100&type=ws&allowInsecure=0&sni=d-e.mitivpn.in.net#CA 🇨🇦 | @Raydikalx | 2FA295
 trojan://mitivpn@188.114.97.6:443?path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=de.mitivpn.in.net&fp=chrome&ech=cloudflare-ech.com+udp://1.1.1.1&type=ws&allowInsecure=0&sni=de.mitivpn.in.net#CA 🇨🇦 | @Raydikalx | 460DC2
 trojan://mitivpn@188.114.97.6:443?path=/?mitivpn&security=tls&alpn=http/1.1&insecure=0&host=sdasdfgv.global.ssl.fastly.net.mitivpn-a.site&fp=chrome&type=ws&allowInsecure=0&sni=global.fastly.com.mitivpn-a.site#CA 🇨🇦 | @Raydikalx | 2B114C
 trojan://mitivpn@188.114.97.6:443?path=/ed=mitivpn&security=tls&alpn=http/1.1&host=sdasdfgv.global.ssl.fastly.top.mitivpn-a.site&fp=chrome&type=ws&sni=global.fastly.com.mitivpn-a.site#CA 🇨🇦 | @Raydikalx | 8131F4
 trojan://mitivpn@188.114.97.6:443?path=https://chatgpt.com&security=tls&alpn=http/1.1&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=mitivpn.sddde.ssddl.globddal.fassdtdly.cow.mitivpn.site#CA 🇨🇦 | @Raydikalx | 58374D
 trojan://mitivpn@188.114.97.6:443?path=https://chatgpt.com&security=tls&alpn=http/1.1&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=mitivpn.sdde.ssdl.globdal.fastdly.net.mitivpn.site#CA 🇨🇦 | @Raydikalx | 2566FB
-trojan://MiTiVPN@188.114.97.6:443?path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=s-s1.mitivpn-cdn.lifestyle&fp=chrome&type=ws&allowInsecure=0&sni=s-s1.mitivpn-cdn.lifestyle#CA 🇨🇦 | @Raydikalx | C078C6
-trojan://MiTiVPN@188.114.97.6:443?path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=s-s3.mitivpn-cdn.lifestyle&fp=chrome&type=ws&allowInsecure=0&sni=s-s3.mitivpn-cdn.lifestyle#CA 🇨🇦 | @Raydikalx | 25F2D2
 trojan://mitivpn@188.114.97.6:443?path=/ed=mitivpn&security=tls&alpn=http/1.1&insecure=0&host=s1.mitivpn.de.ssl.global.fastly.com.iranpoems.ir&fp=chrome&type=ws&allowInsecure=0&sni=s1.mitivpn.de.ssl.global.fastly.co.iranpoems.ir#CA 🇨🇦 | @Raydikalx | 348B8B
 trojan://mitivpn@188.114.97.6:443?path=/?mitivpn&security=tls&alpn=http/1.1&insecure=0&host=s2.mitivpn.nl.ssl.global.fastly.ir.iranpoems.ir&fp=chrome&type=ws&allowInsecure=0&sni=s2.mitivpn.nl.ssl.global.fastly.dev.iranpoems.ir#CA 🇨🇦 | @Raydikalx | E84FE6
 trojan://mitivpn@188.114.97.6:443?path=/ed=mitivpn&security=tls&alpn=http/1.1&insecure=0&host=eee.we.wwww.swsl.glowbal.diwgi.mwy.mitivpn.xyz&fp=chrome&type=ws&allowInsecure=0&sni=www.ssl.global.digi.my.mitivpn.xyz#CA 🇨🇦 | @Raydikalx | 6036D2
@@ -1358,11 +1346,9 @@ trojan://mitivpn@199.232.78.160:443?path=/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@
 trojan://MITIVpN@199.232.78.160:443?path=/&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-44e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | C9F499
 trojan://MiTIVPN@199.232.78.160:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/D-e2@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-44e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | 1FC922
 trojan://MITIVpN@199.232.78.160:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/NLSus---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-44e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | 69C8D9
-trojan://MITIVPN@199.232.78.160:443?path=mehrosaboram&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-44s.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | 6971AC
 trojan://MiTIVPN@199.232.78.160:443?path=/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/D-e2@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh/---@Tarkshodeh---@Tarkshodeh&security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | 675C3A
 trojan://MItIVPN@199.232.78.160:443?security=tls&alpn=http/1.1&insecure=0&host=mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net&fp=chrome&type=ws&allowInsecure=0&sni=ssl.fastly.com#US 🇺🇸 | @Raydikalx | F78E64
-trojan://MiTiVPN@199.232.78.254:443?pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e&path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=Abu.ac.ir&fp=chrome&type=ws&allowInsecure=0&sni=cdn.akamai.steamstatic.com#US 🇺🇸 | @Raydikalx | 65AAF1
-trojan://MiTiVPN@216.24.57.1:443?path=/---@MiTiVPN---@MiTiVPN&security=tls&alpn=http/1.1&insecure=0&host=s-s2.mitivpn-cdn.lifestyle&fp=chrome&type=ws&allowInsecure=0&sni=s-s2.mitivpn-cdn.lifestyle#US 🇺🇸 | @Raydikalx | 6DCFE3
+trojan://MiTiVPN@199.232.78.254:443?type=ws&host=Abu.ac.ir&path=/---@MiTiVPN---@MiTiVPN&security=tls&fp=chrome&sni=cdn.akamai.steamstatic.com&alpn=http/1.1&pcs=cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e#US 🇺🇸 | @Raydikalx | 65AAF1
 trojan://mitivpn@27.50.48.49:443?path=/index.html/ed=mitivpn&security=tls&alpn=http/1.1&insecure=0&host=gamingdll.ir&fp=chrome&type=ws&allowInsecure=0&sni=gamingdll.ir#HK 🇭🇰 | @Raydikalx | B9F74E
 trojan://Mitivpn@4-4-3-mitivpn.global.ssl.fastly.net:443#US 🇺🇸 | @Raydikalx | 356E79
 trojan://MITIVPN@visa.com:443?path=%2F#CA 🇨🇦 | @Raydikalx | 6B9907
@@ -1429,6 +1415,7 @@ trojan://qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS@checkout.salu.lalibobi.online:443?secu
 trojan://qjQdBgnCuhLVLxYKyBrEWHYtWJYtBjpS@checkout.skog.lalibobi.online:443?sni=checkout.skog.lalibobi.online&type=tcp#SE 🇸🇪 | @Raydikalx | 6B632D
 trojan://qV2wW%20mxlLFpREM4sw4LOInVEWufCl55nkhIulUTwyI=@178.105.168.171:2123?sni=qapartners.sec.samsung.com&type=tcp#DE 🇩🇪 | @Raydikalx | 0515BC
 trojan://qV2wW+mxlLFpREM4sw4LOInVEWufCl55nkhIulUTwyI=@178.105.168.171:2123?security=reality&sni=qapartners.sec.samsung.com&type=tcp&fp=chrome&pbk=GrJwMyeMU8CZEilo0M6lMzhilPVRSBxxNKzc6R69LDo&sid=da#DE 🇩🇪 | @Raydikalx | D9E4E1
+trojan://QzVKeGlc2qYRxyzWb3xZFjHbqY2JmOfZ@nava.zandix.ir:2087?allowInsecure=1&alpn=http/1.1&fp=chrome&host=astra.zandix.ir&path=/wss&security=tls&sni=astra.zandix.ir&type=ws#DE 🇩🇪 | @Raydikalx | 340B5A
 trojan://r-_YbwF.j0TtHVewoFIppramjAnmSfqYzJ@172.238.120.124:443?security=tls&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0#DE 🇩🇪 | @Raydikalx | F1727D
 trojan://RJbtIstwtcU5buDY3r@194.124.216.175:443?security=tls&sni=nl-4.tr202604.com&type=tcp&fp=android&allowInsecure=1#NL 🇳🇱 | @Raydikalx | 6E19ED
 trojan://RJbtIstwtcU5buDY3r@194.124.216.53:443?security=tls&type=tcp&headerType=none#NL 🇳🇱 | @Raydikalx | BCC9CA
@@ -1465,6 +1452,7 @@ trojan://UX82473651@3.112.188.176:443?sni=live-stallion.rooster465.autos&allowIn
 trojan://UX82473651%40meet-goshawk.rooster465.autos@162.19.10.99:443?sni=nasnet-162191099-direct.mbghalibaf.com&type=tcp#FR 🇫🇷 | @Raydikalx | 357A96
 trojan://v2whz6ahmyy2f84j@subtu.charsoulink3.ir:2087?sni=pus.mmdaqaorg2.ir&headerType=none&allowInsecure=0&type=tcp&insecure=0&security=tls&alpn=h2%2Chttp%2F1.1%2Ch3&fp=android#TR 🇹🇷 | @Raydikalx | CEF359
 trojan://VjMcS3o6@81.12.80.236:36862?security=tls&sni=diako.fifamarket.monster&type=tcp&host=cloud.ir&headerType=http&fp=chrome&alpn=h2%2Chttp%2F1.1&allowInsecure=0#IR 🇮🇷 | @Raydikalx | 897C6E
+trojan://VMZSldkcX05AKvt6@ugfdrtyi-production.up.railway.app:443?path=/api/Cf1Z-L&security=tls&alpn=http/1.1&insecure=0&host=ugfdrtyi-production.up.railway.app&fp=chrome&type=ws&allowInsecure=0&sni=ugfdrtyi-production.up.railway.app#SG 🇸🇬 | @Raydikalx | A29ECC
 trojan://vP!XvZBNdw.e*ddSgmH!@188.114.96.3:2096?security=tls&sni=n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev&alpn=http/1.1&fp=chrome&type=ws&host=n0q4xprj2d4x4prcq29l8jkczd0.pages.dev&path=/tr/ZFttmjSqvda5ohOQ?ed=2560#CA 🇨🇦 | @Raydikalx | E698DF
 trojan://VuyKYqyDTU1GFaxF3o@194.124.216.55:443/?type=tcp&security=tls&sni=nl-4.tr202504.com&alpn=http%2F1.1&allowInsecure=1&fp=chrome#NL 🇳🇱 | @Raydikalx | 421917
 trojan://VuyKYqyDTU1GFaxF3o@nl-4.tr202504.com:443?type=tcp&security=tls&sni=nl-4.tr202504.com&fp=chrome&alpn=http%2F1.1#NL 🇳🇱 | @Raydikalx | DA5193
