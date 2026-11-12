@@ -1,0 +1,133 @@
+
+name: DarkTunnel Auto Update
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find and convert one VLESS gRPC server
+        run: |
+          cat > update.py <<'PY'
+          import base64
+          import json
+          import os
+          import socket
+          import urllib.request
+          from urllib.parse import urlsplit, parse_qs, unquote
+
+          SOURCES = [
+              "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/protocol/vless/v2ray-base64-0001.txt",
+              "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/protocol/vless/v2ray-base64-0002.txt",
+              "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/protocol/vless/v2ray-base64-0003.txt",
+          ]
+
+          def download(url):
+              req = urllib.request.Request(
+                  url, headers={"User-Agent": "Mozilla/5.0"}
+              )
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  raw = r.read().decode("utf-8", errors="ignore").strip()
+
+              try:
+                  decoded = base64.b64decode(
+                      "".join(raw.split()) + "===", validate=False
+                  ).decode("utf-8", errors="ignore")
+                  if "vless://" in decoded:
+                      return decoded.splitlines()
+              except Exception:
+                  pass
+
+              return raw.splitlines()
+
+          candidates = []
+
+          for source in SOURCES:
+              try:
+                  candidates.extend(download(source))
+              except Exception as e:
+                  print("Source error:", e)
+
+          for line in candidates:
+              line = line.strip()
+              if not line.startswith("vless://"):
+                  continue
+
+              try:
+                  u = urlsplit(line)
+                  params = parse_qs(u.query)
+
+                  uuid = unquote(u.username or "")
+                  host = u.hostname
+                  port = u.port or 443
+                  network = params.get("type", [""])[0].lower()
+                  security = params.get("security", [""])[0].lower()
+                  service = (
+                      params.get("serviceName", [""])[0]
+                      or params.get("service_name", [""])[0]
+                  )
+
+                  if not all([uuid, host, service]):
+                      continue
+                  if network != "grpc" or security != "tls":
+                      continue
+                  if port != 443:
+                      continue
+
+                  with socket.create_connection((host, port), timeout=5):
+                      pass
+
+                  config = {
+                      "type": "VLESS",
+                      "name": "KesHMR",
+                      "vlessTunnelConfig": {
+                          "v2rayConfig": {
+                              "host": host,
+                              "uuid": uuid,
+                              "transportNetwork": "Grpc",
+                              "grpcServiceName": service
+                          }
+                      }
+                  }
+
+                  compact = json.dumps(
+                      config, separators=(",", ":"), ensure_ascii=False
+                  )
+                  encoded = base64.b64encode(
+                      compact.encode("utf-8")
+                  ).decode("ascii")
+
+                  os.makedirs("public", exist_ok=True)
+                  with open("public/KesHMR.txt", "w") as f:
+                      f.write("darktunnel://" + encoded + "\n")
+
+                  print("One candidate passed TCP check.")
+                  break
+
+              except Exception:
+                  continue
+          else:
+              raise SystemExit("No suitable VLESS gRPC TLS server found.")
+
+          PY
+
+          python update.py
+
+      - name: Publish updated TXT
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/KesHMR.txt
+          git diff --cached --quiet || git commit -m "Update DarkTunnel server"
+          git push
